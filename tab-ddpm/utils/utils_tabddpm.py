@@ -67,13 +67,20 @@ def generate_sample(
 
     parent_dir = temp_parent_dir
     raw_config = lib.load_config(pipeline_config_path)
-
     raw_config["sample"]["num_samples"] = num_samples
     raw_config["sample"]["batch_size"] = batch_size
     raw_config["parent_dir"] = parent_dir
-    raw_config["real_data_path"] = os.path.join(TDDPM_DIR, raw_config["real_data_path"])
+    
+    print("before")
+    print(raw_config["real_data_path"])
+    
+    raw_config["real_data_path"] = raw_config["real_data_path"].replace("/home/liu00980/Documents/multimodal/tabular/",REPO_DIR)#os.path.join(TDDPM_DIR, raw_config["real_data_path"])
     raw_config["device"] = device
-
+    
+    print("after")
+    print(raw_config["real_data_path"])
+    
+    
     sample(
         num_samples=raw_config["sample"]["num_samples"],
         batch_size=raw_config["sample"]["batch_size"],

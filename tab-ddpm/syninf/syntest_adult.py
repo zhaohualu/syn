@@ -35,6 +35,8 @@ from utils_syn import (
     blackbox_test_stat,
 )
 
+import torch
+
 seed = 2023
 seed_everything(seed)
 
@@ -76,7 +78,10 @@ rho_max = 20
 num_rhos = 20
 D_null_T = D_type_I = D = 1000
 
-
+if torch.cuda.is_available():
+    device = "cuda:0"
+else:
+    device = "cpu"
 
 ################# Generate synthetic sample to 
 
@@ -103,6 +108,7 @@ for twin_name in ["twin_1", "twin_2"]:
             num_samples = int(val_size * rho_max * D),
             batch_size = int(val_size * rho_max * D / 100),
             temp_parent_dir = temp_exp_dir,
+            device = device
         )
     else:
         print(f"Synthetic data for {twin_name} already exists, skip generating.")
