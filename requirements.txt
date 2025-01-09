@@ -88,7 +88,7 @@ tokenizers==0.13.3
 tomli==1.2.2
 tomli-w==0.4.0
 torch
-torch-fidelity=
+torch-fidelity
 torchaudio
 torchmetrics
 torchvision
