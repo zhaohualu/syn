@@ -68,7 +68,7 @@ pytz==2024.1
 pyyaml==6.0.1
 regex==2023.12.25
 requests==2.31.0
-rtdl==0.0.9
+rtdl
 scikit-learn
 scipy
 seaborn==0.13.2
