@@ -54,7 +54,7 @@ plotly==5.19.0
 pot==0.9.1
 prettytable==3.10.0
 protobuf==4.25.3
-pyarrow==6.0.0
+pyarrow
 pygments==2.17.2
 pynvml==11.5.0
 pyparsing==3.1.1
