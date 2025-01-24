@@ -7,7 +7,7 @@ async-timeout==4.0.3
 attrs==23.2.0
 autopage==0.5.2
 beautifulsoup4==4.12.3
-catboost==1.0.3
+catboost
 category-encoders==2.3.0
 certifi==2024.2.2
 charset-normalizer==3.3.2
