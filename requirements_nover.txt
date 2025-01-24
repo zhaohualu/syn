@@ -36,7 +36,6 @@ importlib-metadata
 importlib-resources
 joblib
 kiwisolver
-libzero
 lightning-utilities
 mako
 markdown
